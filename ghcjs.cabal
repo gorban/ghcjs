@@ -290,6 +290,8 @@ Library
 
     Install-Includes: ghc/compiler/HsVersions.h
 
+    cc-options: -DGHCJS_STANDALONE
+
     c-sources:
         ghc/compiler/parser/cutils.c
         ghc/compiler/cbits/genSym.c
@@ -299,8 +301,8 @@ Library
 
     include-dirs:
         lib/ghc/includes
+        ghc/includes
        -- lib/ghc/autogen
-        -- ghc/includes
 
     hs-source-dirs:
         ghc/compiler
